@@ -1,0 +1,407 @@
+:root {
+  --marinho: #173f55;
+  --texto: #213842;
+  --muted: #53646c;
+  --papel: #fff;
+  --fundo: #f6f5f1;
+  --linha: #d7deda;
+  --dourado: #f5d391;
+  font-family: "DM Sans", sans-serif;
+  color: var(--texto);
+  background: var(--fundo);
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  line-height: 1.65;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+a {
+  color: inherit;
+}
+button {
+  font: inherit;
+  cursor: pointer;
+}
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid #b5500e;
+  outline-offset: 4px;
+}
+h1,
+h2,
+h3 {
+  font-family: "Manrope", sans-serif;
+  line-height: 1.25;
+}
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+.limite {
+  max-width: 1160px;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+}
+.pular {
+  position: absolute;
+  left: 1rem;
+  top: -100px;
+  background: white;
+  padding: 1rem;
+  z-index: 10;
+}
+.pular:focus {
+  top: 1rem;
+}
+header {
+  background: white;
+  border-bottom: 1px solid var(--linha);
+}
+.cabecalho {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 44px;
+  align-items: center;
+  gap: 1rem;
+  padding-block: 1.25rem;
+}
+.marca {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  min-width: 0;
+}
+.marca img {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+}
+.marca span {
+  font-size: 0.7rem;
+  line-height: 1.4;
+  font-weight: 500;
+}
+.marca strong {
+  display: block;
+  font-size: 1.2rem;
+  font-family: "Manrope", sans-serif;
+  color: var(--marinho);
+}
+.menu {
+  width: 44px;
+  height: 44px;
+  background: var(--fundo);
+  border: 1px solid var(--linha);
+  border-radius: 7px;
+  font-size: 1.4rem;
+  color: var(--marinho);
+}
+nav {
+  display: none;
+  grid-column: 1/-1;
+}
+nav.aberta {
+  display: block;
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+nav a {
+  display: block;
+  padding: 0.8rem 1rem;
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 3px solid transparent;
+  min-height: 48px;
+  border-radius: 4px;
+}
+nav a:hover {
+  background: #edf1ef;
+}
+nav a[aria-current] {
+  border-bottom-color: var(--marinho);
+  background: #e8efed;
+}
+.link-associacao {
+  color: var(--marinho);
+}
+main {
+  padding-block: 2rem 3.5rem;
+  min-height: 55vh;
+}
+.introducao {
+  padding-block: 0.5rem 2rem;
+  border-bottom: 1px solid var(--linha);
+}
+.sobretitulo {
+  font-size: 0.7rem;
+  letter-spacing: 0.17em;
+  font-weight: 700;
+  color: var(--muted);
+  margin-bottom: 0.8rem;
+}
+h1 {
+  font-size: 2.1rem;
+  letter-spacing: -0.045em;
+  color: var(--marinho);
+  margin-bottom: 1rem;
+}
+.descricao {
+  font-size: 1rem;
+  color: var(--muted);
+  max-width: 640px;
+  margin-bottom: 0;
+}
+.barra-diretorio {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding-block: 1.75rem 1rem;
+}
+.barra-diretorio h2 {
+  font-size: 1.05rem;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.35rem;
+}
+#quantidade {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-bottom: 0;
+}
+.visualizacoes {
+  display: flex;
+  gap: 0.35rem;
+  border: 1px solid var(--linha);
+  padding: 0.25rem;
+  border-radius: 8px;
+  background: white;
+}
+.visualizacoes button {
+  min-height: 44px;
+  padding: 0.45rem 0.85rem;
+  border: 0;
+  border-radius: 5px;
+  background: white;
+  color: var(--marinho);
+  font-size: 0.85rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.visualizacoes button span {
+  font-size: 1.25rem;
+}
+.visualizacoes button:hover {
+  background: #e8efed;
+}
+.visualizacoes button[aria-pressed="true"] {
+  background: var(--marinho);
+  color: white;
+}
+.aviso {
+  font-size: 0.75rem;
+  color: var(--muted);
+  margin-bottom: 1.5rem;
+  max-width: 850px;
+}
+.membros {
+  display: grid;
+  gap: 1.25rem;
+}
+.membro {
+  background: white;
+  border: 1px solid var(--linha);
+  border-radius: 10px;
+  overflow: hidden;
+  min-width: 0;
+}
+.membro > img {
+  display: block;
+  width: 100%;
+  height: 150px;
+  object-fit: contain;
+  background: #f0f2ef;
+  padding: 1rem;
+}
+.corpo-membro {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.setor {
+  font-size: 0.7rem;
+  color: var(--muted);
+  margin-bottom: 0.4rem;
+}
+.nome-membro {
+  font-size: 1.2rem;
+  letter-spacing: -0.025em;
+  margin-bottom: 0.65rem;
+}
+.descricao-membro {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-bottom: 1rem;
+  min-height: 2.8rem;
+}
+.endereco,
+.telefone {
+  font-size: 0.8rem;
+  margin-bottom: 0.4rem;
+  overflow-wrap: anywhere;
+}
+.site-membro {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-underline-offset: 4px;
+  color: var(--marinho);
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
+.nivel {
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 0.25rem 0.65rem;
+  border-radius: 4px;
+  margin-top: 0.5rem;
+  white-space: nowrap;
+}
+.nivel-1 {
+  background: #edf0f1;
+  color: #3b4c55;
+}
+.nivel-2 {
+  background: #e5eaf0;
+  color: #364657;
+}
+.nivel-3 {
+  background: #f7e6bf;
+  color: #604615;
+}
+.lista {
+  gap: 0;
+  border: 1px solid var(--linha);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.lista .membro {
+  border: 0;
+  border-radius: 0;
+}
+.lista .membro:nth-child(even) {
+  background: #eaf0ed;
+}
+.lista .membro + .membro {
+  border-top: 1px solid var(--linha);
+}
+.lista .membro > img {
+  display: none;
+}
+.lista .descricao-membro {
+  display: none;
+}
+.lista .corpo-membro {
+  padding: 1.1rem 1.25rem;
+}
+.lista .nivel {
+  margin-top: 0.25rem;
+}
+.erro {
+  border: 1px solid #945326;
+  border-radius: 8px;
+  padding: 1.5rem;
+  background: #fff5eb;
+}
+.erro[hidden] {
+  display: none;
+}
+.erro button,
+.botao-principal {
+  display: inline-block;
+  padding: 0.65rem 1rem;
+  min-height: 44px;
+  background: var(--marinho);
+  color: white;
+  border: 1px solid var(--marinho);
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.botao-principal {
+  margin-top: 1.5rem;
+}
+footer {
+  background: var(--marinho);
+  color: white;
+}
+.rodape {
+  display: grid;
+  gap: 1.5rem;
+  padding-block: 2rem;
+}
+.rodape p {
+  margin-bottom: 0.4rem;
+  font-size: 0.8rem;
+}
+.rodape .nome-camara {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 0.7rem;
+}
+.rodape .titulo-rodape {
+  font-weight: 700;
+}
+.rodape a {
+  font-size: 0.8rem;
+  overflow-wrap: anywhere;
+  text-underline-offset: 4px;
+}
+.redes {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+}
+.redes a {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: white;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+.redes a:hover {
+  background: var(--dourado);
+}
+.redes img {
+  width: 24px;
+  height: 24px;
+}
+.creditos {
+  border-top: 1px solid #537181;
+  padding-block: 1rem 1.5rem;
+}
+.creditos p {
+  font-size: 0.7rem;
+  margin-bottom: 0.25rem;
+}

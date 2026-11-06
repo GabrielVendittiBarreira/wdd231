@@ -3,20 +3,132 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Projeto da Câmara | Gabriel Venditti Barreira</title>
+    <title>Página inicial da Câmara | Câmara de Comércio de São Paulo</title>
     <meta
       name="description"
-      content="Espaço reservado para o Projeto da Câmara de WDD 231.">
-    <link rel="stylesheet" href="../estilos/normalize.css">
-    <link rel="stylesheet" href="../estilos/telas-pequenas.css">
+      content="Explore o diretório acadêmico da Câmara de Comércio de São Paulo. Conheça sete empresas fictícias e alterne entre as visualizações em grade e lista.">
+    <meta name="author" content="Gabriel Venditti Barreira">
+    <meta
+      property="og:title"
+      content="Página inicial da Câmara | Câmara de Comércio de São Paulo">
+    <meta
+      property="og:description"
+      content="Conectando ideias, pessoas e negócios. Explore os membros deste projeto acadêmico de Câmara de Comércio.">
+    <meta
+      property="og:image"
+      content="https://gabrielvendittibarreira.github.io/wdd231/camara/imagens/compartilhamento.png">
+    <meta
+      property="og:image:alt"
+      content="Ilustração de edifícios em azul e dourado, identidade visual da Câmara">
+    <meta
+      property="og:url"
+      content="https://gabrielvendittibarreira.github.io/wdd231/camara/index.html">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <link rel="icon" href="imagens/logo.svg" type="image/svg+xml">
+    <link
+      rel="canonical"
+      href="https://gabrielvendittibarreira.github.io/wdd231/camara/index.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet" href="estilos/normalize.css">
+    <link rel="stylesheet" href="estilos/telas-pequenas.css">
+    <link rel="stylesheet" href="estilos/telas-grandes.css">
+    <script src="scripts/site.js" defer></script>
   </head>
   <body>
-    <main>
-      <h1>Projeto da Câmara</h1>
-      <p>
-        Este projeto será desenvolvido a partir da semana 02 do curso WDD 231.
-      </p>
-      <a href="../">Voltar à Página Inicial</a>
+    <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+    <header>
+      <div class="cabecalho limite">
+        <a class="marca" href="index.html"
+          ><img src="imagens/logo.svg" alt="" width="56" height="56"><span
+            >Câmara de Comércio<strong>São Paulo</strong></span
+          ></a
+        >
+        <button
+          class="menu"
+          id="botao-menu"
+          type="button"
+          aria-label="Abrir menu"
+          aria-controls="navegacao"
+          aria-expanded="false"
+        >
+          ☰
+        </button>
+        <nav id="navegacao" aria-label="Navegação principal">
+          <ul>
+            <li><a href="index.html" aria-current="page">Início</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="diretorio.html">Diretório</a></li>
+            <li>
+              <a class="link-associacao" href="associe-se.html"
+                >Associe-se <span aria-hidden="true">↗</span></a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main id="conteudo" class="limite">
+      <div class="introducao">
+        <p class="sobretitulo">PROJETO WDD 231</p>
+        <h1>Página inicial da Câmara</h1>
+        <p class="descricao">
+          Esta página será desenvolvida na semana 03. O diretório de membros já
+          está disponível.
+        </p>
+        <a class="botao-principal" href="diretorio.html"
+          >Explorar o diretório <span aria-hidden="true">→</span></a
+        >
+      </div>
     </main>
+    <footer>
+      <div class="rodape limite">
+        <div>
+          <p class="nome-camara">Câmara de Comércio de São Paulo</p>
+          <p>Conectando ideias, pessoas e negócios.</p>
+          <p>São Paulo · SP · Brasil</p>
+        </div>
+        <div>
+          <p class="titulo-rodape">Contato do projeto</p>
+          <a href="mailto:gabrielvendittib@gmail.com"
+            >gabrielvendittib@gmail.com</a
+          >
+          <p>Telefone ilustrativo: (11) 0000-0100</p>
+          <p>Projeto acadêmico com dados fictícios.</p>
+        </div>
+        <div class="redes" role="group" aria-label="Redes e contato">
+          <a
+            href="https://github.com/GabrielVendittiBarreira/wdd231"
+            aria-label="Repositório no GitHub"
+            ><img
+              src="imagens/github.svg"
+              alt=""
+              width="24"
+              height="24"></a
+          ><a
+            href="https://www.linkedin.com/in/gabrielvendittibarreira/"
+            aria-label="Perfil no LinkedIn"
+            ><img
+              src="imagens/linkedin.svg"
+              alt=""
+              width="24"
+              height="24"></a
+          ><a
+            href="mailto:gabrielvendittib@gmail.com"
+            aria-label="E-mail do desenvolvedor"
+            ><img src="imagens/email.svg" alt="" width="24" height="24"></a>
+        </div>
+      </div>
+      <div class="creditos limite">
+        <p>
+          © <span id="anoAtual"></span> · Gabriel Venditti Barreira · WDD 231
+        </p>
+        <p id="ultimaModificacao"></p>
+      </div>
+    </footer>
   </body>
 </html>

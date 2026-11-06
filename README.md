@@ -23,3 +23,14 @@ Na raiz: `python3 -m http.server 8000`, depois abra http://localhost:8000.
 - Normalize.css: Nicolas Gallagher e Jonathan Neal, licença MIT incluída no arquivo.
 - Ícones: Bootstrap Icons, licença MIT (https://github.com/twbs/icons/blob/main/LICENSE).
 - Foto e apresentação reaproveitadas do projeto pessoal WDD 131.
+
+## Semana 02 — Diretório da Câmara
+
+Página: https://gabrielvendittibarreira.github.io/wdd231/camara/diretorio.html
+
+- Projeto independente em `camara/`, com sete empresas fictícias em `dados/membros.json`.
+- Dados carregados com `fetch` e `async/await`; grade e lista sem imagens, menu responsivo e tratamento de falha de rede.
+- São Paulo, SP foi adotada como localização provisória, informada ao aluno, pois a cidade de residência não foi fornecida.
+- Empresas, contatos, endereços e vínculos de associação são exemplos acadêmicos. Os sites usam o domínio reservado `example.com`.
+- Logotipos e imagem Open Graph são ilustrações próprias. Ícones sociais Bootstrap Icons (licença MIT em `camara/imagens/licenca-icones.txt`).
+- Início, Sobre e Associe-se contêm a estrutura compartilhada e avisos das semanas futuras; seus conteúdos completos não fazem parte da entrega S02.

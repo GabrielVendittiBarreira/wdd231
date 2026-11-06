@@ -1,0 +1,72 @@
+[
+  {
+    "nome": "Horizonte Tecnologia",
+    "endereco": "Rua das Ideias, 120 — Centro, São Paulo — SP",
+    "telefone": "(11) 0000-0101",
+    "site": "https://example.com/?empresa=horizonte",
+    "imagem": "horizonte.svg",
+    "nivelAssociacao": 3,
+    "setor": "Tecnologia e inovação",
+    "descricao": "Soluções digitais para negócios que querem ir além."
+  },
+  {
+    "nome": "Raízes Café",
+    "endereco": "Rua do Encontro, 45 — Vila Mariana, São Paulo — SP",
+    "telefone": "(11) 0000-0102",
+    "site": "https://example.com/?empresa=raizes",
+    "imagem": "raizes.svg",
+    "nivelAssociacao": 2,
+    "setor": "Alimentação e convivência",
+    "descricao": "Café, boas conversas e uma pausa no ritmo da cidade."
+  },
+  {
+    "nome": "Vértice Arquitetura",
+    "endereco": "Avenida dos Projetos, 380 — Pinheiros, São Paulo — SP",
+    "telefone": "(11) 0000-0103",
+    "site": "https://example.com/?empresa=vertice",
+    "imagem": "vertice.svg",
+    "nivelAssociacao": 3,
+    "setor": "Arquitetura e design",
+    "descricao": "Espaços pensados para aproximar pessoas e ideias."
+  },
+  {
+    "nome": "Casa Verde Mercado",
+    "endereco": "Rua das Sementes, 72 — Mooca, São Paulo — SP",
+    "telefone": "(11) 0000-0104",
+    "site": "https://example.com/?empresa=casa-verde",
+    "imagem": "casa-verde.svg",
+    "nivelAssociacao": 1,
+    "setor": "Comércio e sustentabilidade",
+    "descricao": "Consumo consciente e produtos para o dia a dia."
+  },
+  {
+    "nome": "Ponto Norte Logística",
+    "endereco": "Avenida das Rotas, 950 — Santana, São Paulo — SP",
+    "telefone": "(11) 0000-0105",
+    "site": "https://example.com/?empresa=ponto-norte",
+    "imagem": "ponto-norte.svg",
+    "nivelAssociacao": 2,
+    "setor": "Transportes e serviços",
+    "descricao": "Conectando negócios com soluções de entrega."
+  },
+  {
+    "nome": "Ateliê Aurora",
+    "endereco": "Rua das Cores, 216 — Bela Vista, São Paulo — SP",
+    "telefone": "(11) 0000-0106",
+    "site": "https://example.com/?empresa=aurora",
+    "imagem": "aurora.svg",
+    "nivelAssociacao": 1,
+    "setor": "Moda e economia criativa",
+    "descricao": "Design autoral e criatividade em cada detalhe."
+  },
+  {
+    "nome": "Conexão Educação",
+    "endereco": "Rua do Aprender, 88 — Liberdade, São Paulo — SP",
+    "telefone": "(11) 0000-0107",
+    "site": "https://example.com/?empresa=conexao",
+    "imagem": "conexao.svg",
+    "nivelAssociacao": 3,
+    "setor": "Educação e capacitação",
+    "descricao": "Novas habilidades para construir o próximo passo."
+  }
+]
