@@ -1,79 +1,150 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Gabriel Venditti Barreira | WDD 231 — Página Inicial</title>
-  <meta name="description" content="Conheça Gabriel Venditti Barreira, estudante de desenvolvimento de software da BYU-Idaho. Explore os cursos e projetos de programação e desenvolvimento web.">
-  <meta name="author" content="Gabriel Venditti Barreira">
-  <link rel="icon" href="imagens/logo.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="estilos/normalize.css">
-  <link rel="stylesheet" href="estilos/telas-pequenas.css">
-  <link rel="stylesheet" href="estilos/telas-grandes.css">
-  <script src="scripts/navegacao.js" defer></script>
-  <script src="scripts/data.js" defer></script>
-  <script src="scripts/cursos.js" defer></script>
-  <script src="scripts/curso.js" defer></script>
-</head>
-<body>
-  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
-  <header class="cabecalho">
-    <img src="imagens/logo.svg" alt="" width="48" height="48">
-    <span>Gabriel Venditti Barreira</span>
-    <button id="botao-nav" class="hamburguer" type="button" aria-label="Abrir menu" aria-controls="barra-navegacao" aria-expanded="false">☰</button>
-  </header>
-  <nav id="barra-navegacao" class="navegacao" aria-label="Navegação principal">
-    <ul>
-      <li><a href="./" aria-current="page">Página Inicial</a></li>
-      <li><a href="camara/">Projeto da Câmara</a></li>
-      <li><a href="projeto-final/">Projeto Final</a></li>
-    </ul>
-  </nav>
-  <main id="conteudo">
-    <div class="titulo-pagina"><p class="sobretitulo">APRENDER · CRIAR · EVOLUIR</p><h1>Página Inicial</h1></div>
-    <div class="apresentacao">
-      <section class="painel sobre">
-        <h2>Sobre Mim</h2>
-        <div class="texto-sobre">
-          <p class="saudacao">Olá, eu sou o Gabriel.</p>
-          <p>Sou estudante da BYU-Idaho e estou desenvolvendo minhas habilidades em HTML, CSS, JavaScript e design para a web.</p>
-          <p>Gosto de aprender por meio de projetos práticos, resolver problemas e criar páginas claras, acessíveis e úteis para quem as visita.</p>
-          <p>Neste espaço, reúno meu percurso em programação e desenvolvimento web. Cada projeto é uma oportunidade de transformar o que aprendo em algo que funciona.</p>
-          <span class="local">Brasil · Desenvolvimento de software</span>
-        </div>
-      </section>
-      <section class="painel foto">
-        <h2>Foto</h2>
-        <figure><img src="imagens/perfil.jpg" alt="Gabriel Venditti Barreira" width="200" height="254" fetchpriority="high"><figcaption>Gabriel Venditti Barreira</figcaption></figure>
-      </section>
-    </div>
-    <section class="painel certificados" aria-labelledby="titulo-cursos">
-      <h2 id="titulo-cursos">Cursos de Certificação Web</h2>
-      <div class="conteudo-cursos">
-        <p>Programação de Computadores e Web</p>
-        <div class="filtros" role="group" aria-label="Filtrar cursos por área">
-          <button type="button" data-filtro="todos" aria-pressed="true">Todos os Cursos</button>
-          <button type="button" data-filtro="CSE" aria-pressed="false">Cursos CSE</button>
-          <button type="button" data-filtro="WDD" aria-pressed="false">Cursos WDD</button>
-        </div>
-        <div id="lista-cursos" class="lista-cursos"></div>
-        <p id="resumo-creditos" class="resumo-creditos" aria-live="polite"></p>
-        <p class="legenda">✓ Curso concluído · Demais cursos: a concluir</p>
-        <noscript>Ative o JavaScript para consultar a lista de cursos e seus créditos.</noscript>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Gabriel Venditti Barreira | WDD 231 — Página Inicial</title>
+    <meta
+      name="description"
+      content="Conheça Gabriel Venditti Barreira, estudante de desenvolvimento de software da BYU-Idaho. Explore os cursos e projetos de programação e desenvolvimento web."
+    />
+    <meta name="author" content="Gabriel Venditti Barreira" />
+    <link rel="icon" href="imagens/logo.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="estilos/normalize.css" />
+    <link rel="stylesheet" href="estilos/telas-pequenas.css" />
+    <link rel="stylesheet" href="estilos/telas-grandes.css" />
+    <script src="scripts/navegacao.js" defer></script>
+    <script src="scripts/data.js" defer></script>
+    <script src="scripts/cursos.js" defer></script>
+    <script src="scripts/curso.js" defer></script>
+  </head>
+  <body>
+    <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+    <header class="cabecalho">
+      <img src="imagens/logo.svg" alt="" width="48" height="48" />
+      <span>Gabriel Venditti Barreira</span>
+      <button
+        id="botao-nav"
+        class="hamburguer"
+        type="button"
+        aria-label="Abrir menu"
+        aria-controls="barra-navegacao"
+        aria-expanded="false"
+      >
+        ☰
+      </button>
+    </header>
+    <nav
+      id="barra-navegacao"
+      class="navegacao"
+      aria-label="Navegação principal"
+    >
+      <ul>
+        <li><a href="./" aria-current="page">Página Inicial</a></li>
+        <li><a href="camara/">Projeto da Câmara</a></li>
+        <li><a href="projeto-final/">Projeto Final</a></li>
+      </ul>
+    </nav>
+    <main id="conteudo">
+      <div class="titulo-pagina">
+        <p class="sobretitulo">APRENDER · CRIAR · EVOLUIR</p>
+        <h1>Página Inicial</h1>
       </div>
-    </section>
-  </main>
-  <footer>
-    <div class="redes" aria-label="Redes sociais e contato">
-      <a href="https://github.com/GabrielVendittiBarreira/wdd231" aria-label="Repositório no GitHub"><img src="imagens/github.svg" alt="" width="24" height="24"></a>
-      <a href="https://www.linkedin.com/in/gabrielvendittibarreira/" aria-label="Perfil no LinkedIn"><img src="imagens/linkedin.svg" alt="" width="24" height="24"></a>
-      <a href="mailto:gabrielvendittib@gmail.com" aria-label="Enviar e-mail para Gabriel"><img src="imagens/email.svg" alt="" width="24" height="24"></a>
-    </div>
-    <p>© <span id="anoAtual"></span> Gabriel Venditti Barreira · Brasil</p>
-    <p id="ultimaModificacao"></p>
-  </footer>
-</body>
+      <div class="apresentacao">
+        <section class="painel sobre">
+          <h2>Sobre Mim</h2>
+          <div class="texto-sobre">
+            <p class="saudacao">Olá, eu sou o Gabriel.</p>
+            <p>
+              Sou estudante da BYU-Idaho e estou desenvolvendo minhas
+              habilidades em HTML, CSS, JavaScript e design para a web.
+            </p>
+            <p>
+              Gosto de aprender por meio de projetos práticos, resolver
+              problemas e criar páginas claras, acessíveis e úteis para quem as
+              visita.
+            </p>
+            <p>
+              Neste espaço, reúno meu percurso em programação e desenvolvimento
+              web. Cada projeto é uma oportunidade de transformar o que aprendo
+              em algo que funciona.
+            </p>
+            <span class="local">Brasil · Desenvolvimento de software</span>
+          </div>
+        </section>
+        <section class="painel foto">
+          <h2>Foto</h2>
+          <figure>
+            <img
+              src="imagens/perfil.jpg"
+              alt="Gabriel Venditti Barreira"
+              width="200"
+              height="254"
+              fetchpriority="high"
+            />
+            <figcaption>Gabriel Venditti Barreira</figcaption>
+          </figure>
+        </section>
+      </div>
+      <section class="painel certificados" aria-labelledby="titulo-cursos">
+        <h2 id="titulo-cursos">Cursos de Certificação Web</h2>
+        <div class="conteudo-cursos">
+          <p>Programação de Computadores e Web</p>
+          <div
+            class="filtros"
+            role="group"
+            aria-label="Filtrar cursos por área"
+          >
+            <button type="button" data-filtro="todos" aria-pressed="true">
+              Todos os Cursos
+            </button>
+            <button type="button" data-filtro="CSE" aria-pressed="false">
+              Cursos CSE
+            </button>
+            <button type="button" data-filtro="WDD" aria-pressed="false">
+              Cursos WDD
+            </button>
+          </div>
+          <div id="lista-cursos" class="lista-cursos"></div>
+          <p
+            id="resumo-creditos"
+            class="resumo-creditos"
+            aria-live="polite"
+          ></p>
+          <p class="legenda">✓ Curso concluído · Demais cursos: a concluir</p>
+          <noscript
+            >Ative o JavaScript para consultar a lista de cursos e seus
+            créditos.</noscript
+          >
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="redes" role="group" aria-label="Redes sociais e contato">
+        <a
+          href="https://github.com/GabrielVendittiBarreira/wdd231"
+          aria-label="Repositório no GitHub"
+          ><img src="imagens/github.svg" alt="" width="24" height="24"
+        /></a>
+        <a
+          href="https://www.linkedin.com/in/gabrielvendittibarreira/"
+          aria-label="Perfil no LinkedIn"
+          ><img src="imagens/linkedin.svg" alt="" width="24" height="24"
+        /></a>
+        <a
+          href="mailto:gabrielvendittib@gmail.com"
+          aria-label="Enviar e-mail para Gabriel"
+          ><img src="imagens/email.svg" alt="" width="24" height="24"
+        /></a>
+      </div>
+      <p>© <span id="anoAtual"></span> Gabriel Venditti Barreira · Brasil</p>
+      <p id="ultimaModificacao"></p>
+    </footer>
+  </body>
 </html>
