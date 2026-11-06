@@ -22,9 +22,12 @@ A página principal implementa logo SVG, cabeçalho com Grid, botão com `aria-e
 
 ## Etapas pessoais ainda necessárias
 
-- Confirmar os cursos concluídos em `scripts/cursos.js`; todos começam como `false`, conforme a fonte oficial.
 - Selecionar seu grupo e horário no Canvas e entrar na equipe do curso no Teams.
 - Apresentar-se ao grupo e configurar suas notificações no Teams.
 - Fazer o fork na própria conta CodePen, se solicitado pelo professor; usar o exercício local como referência.
 - Responder aos questionários de participação/leitura de acordo com o que você de fato realizou.
 - Enviar o endereço GitHub Pages no Canvas.
+
+## Progresso confirmado pelo aluno
+
+CSE 110, CSE 111, WDD 130 e WDD 131 concluídos. CSE 210 e WDD 231 em andamento.

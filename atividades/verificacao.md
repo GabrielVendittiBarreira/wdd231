@@ -28,4 +28,4 @@ Resultados observados no relatório Lighthouse 13.6.0. São uma medição pontua
 
 ## Confirmações e ações do aluno
 
-Os cursos concluídos ainda precisam ser confirmados; não foram presumidos. As etapas de participação no Canvas, escolha de grupo e apresentação no Teams não foram realizadas pelo agente. O CodePen retornou HTTP 403 e o exercício equivalente foi salvo localmente, sem criar um fork na conta do aluno.
+O aluno confirmou os cursos: CSE 110, CSE 111, WDD 130 e WDD 131 concluídos; CSE 210 e WDD 231 em andamento. Os quatro cartões concluídos usam cor e texto próprios. As etapas de participação no Canvas, escolha de grupo e apresentação no Teams não foram realizadas pelo agente. O CodePen retornou HTTP 403 e o exercício equivalente foi salvo localmente, sem criar um fork na conta do aluno.

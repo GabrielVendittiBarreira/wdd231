@@ -9,9 +9,9 @@ Página pessoal do curso Desenvolvimento Frontend para Web I, construída com HT
 - Exercício de revisão de JavaScript em `atividades/revisao-javascript.html`.
 - Os links de Câmara e Projeto Final apontam para páginas que informam em qual semana os projetos serão desenvolvidos.
 
-## Personalização pendente
+## Progresso dos cursos
 
-Os campos `concluido` em `scripts/cursos.js` permanecem `false` até o aluno confirmar os cursos concluídos. A existência de um projeto não comprova conclusão de um curso.
+Conforme confirmado pelo aluno: CSE 110, CSE 111, WDD 130 e WDD 131 concluídos; CSE 210 e WDD 231 em andamento. Os campos `concluido` em `scripts/cursos.js` refletem essa informação.
 
 ## Execução local
 
