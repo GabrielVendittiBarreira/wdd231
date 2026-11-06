@@ -7,7 +7,7 @@ Página pessoal do curso Desenvolvimento Frontend para Web I, construída com HT
 - Página responsiva a partir de 320 px, menu acessível e rodapé com datas dinâmicas.
 - Seis cursos do array oficial, filtros por área e soma de créditos com `reduce`.
 - Exercício de revisão de JavaScript em `atividades/revisao-javascript.html`.
-- Os links de Câmara e Projeto Final apontam para páginas que informam em qual semana os projetos serão desenvolvidos.
+- O link Projeto da Câmara abre o diretório da semana 02; Projeto Final mantém o aviso da semana em que será desenvolvido.
 
 ## Progresso dos cursos
 
