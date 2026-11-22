@@ -1,0 +1,34 @@
+.layout-associacao { display: grid; gap: 2rem; padding-top: 2rem; align-items: start; }
+.painel-formulario, .cartao-plano { background: var(--papel); border: 1px solid var(--linha); border-radius: 12px; padding: 1.5rem; min-width: 0; }
+.painel-formulario h2, .planos h2 { font-size: 1.4rem; color: var(--marinho); }
+.ajuda { color: var(--muted); font-size: .85rem; }
+.formulario-associacao { display: grid; gap: 1.15rem; }
+.formulario-associacao label { display: grid; gap: .4rem; font-weight: 600; }
+.formulario-associacao input:not([type="hidden"]), .formulario-associacao select, .formulario-associacao textarea { width: 100%; min-width: 0; min-height: 48px; padding: .7rem .8rem; border: 1px solid #77868c; border-radius: 6px; background: white; color: var(--texto); font: inherit; font-weight: 400; }
+.formulario-associacao input::placeholder { color: var(--muted); opacity: 1; }
+.formulario-associacao textarea { resize: vertical; }
+.formulario-associacao :is(input, select, textarea):focus-visible { outline: 3px solid #b5500e; outline-offset: 3px; }
+.formulario-associacao .ajuda { margin: -.7rem 0 0; }
+.formulario-associacao .botao-principal { margin-top: .25rem; }
+.cartao-plano { margin-top: 1rem; border-left: 5px solid var(--marinho); animation: entrada-plano .65s ease-out both; animation-delay: calc(var(--ordem) * 100ms); }
+.cartao-plano h3 { font-size: 1.65rem; margin-bottom: .3rem; }
+.cartao-plano .sobretitulo { font-size: .65rem; margin-bottom: .5rem; }
+.cartao-plano p { margin-bottom: .65rem; }
+.cartao-plano a { display: inline-flex; align-items: center; gap: .5rem; min-height: 44px; font-weight: 700; color: var(--marinho); text-underline-offset: 4px; }
+.plano-bronze { border-left-color: #936133; }
+.plano-silver { border-left-color: #687b86; }
+.plano-gold { border-left-color: #b38425; background: #fffbf2; }
+.preco { font-weight: 700; color: var(--marinho); }
+dialog { width: min(92vw, 520px); max-height: 85vh; overflow-y: auto; border: 1px solid var(--linha); border-radius: 12px; padding: 2rem; background: white; color: var(--texto); }
+dialog::backdrop { background: rgb(13 35 48 / 65%); }
+dialog h2 { color: var(--marinho); }
+dialog li { margin-bottom: .65rem; }
+dialog .botao-principal { margin-top: .5rem; }
+body:has(dialog[open]) { overflow: hidden; }
+.confirmacao { max-width: 760px; margin-top: 2rem; }
+.confirmacao dl { margin-bottom: 0; }
+.confirmacao dt { font-size: .85rem; color: var(--muted); font-weight: 600; }
+.confirmacao dd { margin: 0 0 1rem; padding-bottom: .75rem; border-bottom: 1px solid var(--linha); overflow-wrap: anywhere; }
+@keyframes entrada-plano { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+@media (min-width: 900px) { .layout-associacao { grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 3rem; } .painel-formulario { padding: 2rem; } }
+@media (prefers-reduced-motion: reduce) { .cartao-plano { animation: none; } }

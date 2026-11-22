@@ -6,7 +6,7 @@
     <title>Associe-se à Câmara | Câmara de Comércio de São Paulo</title>
     <meta
       name="description"
-      content="Explore o diretório acadêmico da Câmara de Comércio de São Paulo. Conheça sete empresas fictícias e alterne entre as visualizações em grade e lista.">
+      content="Solicite sua associação à Câmara de Comércio de São Paulo e conheça os planos e benefícios para sua organização.">
     <meta name="author" content="Gabriel Venditti Barreira">
     <meta
       property="og:title"
@@ -22,13 +22,13 @@
       content="Ilustração de edifícios em azul e dourado, identidade visual da Câmara">
     <meta
       property="og:url"
-      content="https://gabrielvendittibarreira.github.io/wdd231/camara/associe-se.html">
+      content="https://gabrielvendittibarreira.github.io/wdd231/camara/associacao.html">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="pt_BR">
     <link rel="icon" href="imagens/logo.svg" type="image/svg+xml">
     <link
       rel="canonical"
-      href="https://gabrielvendittibarreira.github.io/wdd231/camara/associe-se.html">
+      href="https://gabrielvendittibarreira.github.io/wdd231/camara/associacao.html">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -37,7 +37,9 @@
     <link rel="stylesheet" href="estilos/normalize.css">
     <link rel="stylesheet" href="estilos/telas-pequenas.css">
     <link rel="stylesheet" href="estilos/telas-grandes.css">
+    <link rel="stylesheet" href="estilos/associacao.css">
     <script src="scripts/site.js" defer></script>
+    <script src="scripts/associacao.js" defer></script>
   </head>
   <body>
     <a class="pular" href="#conteudo">Pular para o conteúdo</a>
@@ -66,7 +68,7 @@
             <li>
               <a
                 class="link-associacao"
-                href="associe-se.html"
+                href="associacao.html"
                 aria-current="page"
                 >Associe-se <span aria-hidden="true">↗</span></a
               >
@@ -77,16 +79,100 @@
     </header>
     <main id="conteudo" class="limite">
       <div class="introducao">
-        <p class="sobretitulo">PROJETO WDD 231</p>
-        <h1>Associe-se à Câmara</h1>
-        <p class="descricao">
-          Esta página será desenvolvida na semana 04. O diretório de membros já
-          está disponível.
-        </p>
-        <a class="botao-principal" href="diretorio.html"
-          >Explorar o diretório <span aria-hidden="true">→</span></a
-        >
+        <p class="sobretitulo">CRESÇA COM A NOSSA REDE</p>
+        <h1>Seu próximo passo começa com uma conexão.</h1>
+        <p class="descricao">Associe sua organização à Câmara de Comércio de São Paulo. Encontre novas oportunidades, compartilhe experiências e fortaleça os negócios locais.</p>
       </div>
+      <div class="layout-associacao">
+        <section class="painel-formulario" aria-labelledby="titulo-formulario">
+          <h2 id="titulo-formulario">Pedido de associação</h2>
+          <p class="ajuda">Os campos com * são obrigatórios. Este formulário é uma demonstração acadêmica; use dados fictícios.</p>
+          <form method="get" action="agradecimento.html" class="formulario-associacao">
+          <label>Nome *
+            <input type="text" name="nome" title="Informe seu nome" autocomplete="given-name" required>
+          </label>
+          <label>Sobrenome *
+            <input type="text" name="sobrenome" title="Informe seu sobrenome" autocomplete="family-name" required>
+          </label>
+          <label>Cargo na organização
+            <input type="text" name="cargo" title="Use pelo menos 7 caracteres: letras, espaços ou hifens" autocomplete="organization-title" pattern="[\p{L} \-]{7,}" aria-describedby="ajuda-cargo">
+          </label>
+          <p id="ajuda-cargo" class="ajuda">Use pelo menos 7 caracteres, somente letras, espaços ou hifens.</p>
+          <label>E-mail *
+            <input type="email" name="email" title="Informe seu endereço de e-mail" autocomplete="email" placeholder="voce@empresa.com.br" required>
+          </label>
+          <label>Celular *
+            <input type="tel" name="celular" title="Informe seu celular com DDD" autocomplete="tel" required>
+          </label>
+          <label>Nome da empresa ou organização *
+            <input type="text" name="organizacao" title="Informe o nome da empresa ou organização" autocomplete="organization" required>
+          </label>
+          <label>Nível de associação *
+            <select name="nivel" title="Escolha o nível de associação" required>
+              <option value="" disabled selected>Selecione um nível</option>
+              <option value="np">NP — Sem fins lucrativos · Gratuito</option>
+              <option value="bronze">Bronze · R$ 50/mês</option>
+              <option value="silver">Prata · R$ 100/mês</option>
+              <option value="gold">Ouro · R$ 200/mês</option>
+            </select>
+          </label>
+          <label>Descrição da atividade ou organização
+            <textarea name="descricao" title="Descreva a atividade da sua organização" rows="4"></textarea>
+          </label>
+          <input type="hidden" name="datahora" id="datahora">
+          <button class="botao-principal" type="submit">Enviar pedido de associação <span aria-hidden="true">→</span></button>
+          </form>
+        </section>
+        <section class="planos" aria-labelledby="titulo-planos">
+          <h2 id="titulo-planos">Uma associação para cada momento</h2>
+          <p class="ajuda">Compare os benefícios e escolha seu plano. Valores ilustrativos.</p>
+          <article class="cartao-plano plano-np" style="--ordem: 0">
+            <p class="sobretitulo">ASSOCIAÇÃO</p>
+            <h3>NP</h3><p class="preco">Gratuito</p><p>Para organizações sem fins lucrativos.</p>
+            <a href="#beneficios-np" data-modal="beneficios-np" aria-haspopup="dialog">Ver benefícios NP <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="cartao-plano plano-bronze" style="--ordem: 1">
+            <p class="sobretitulo">ASSOCIAÇÃO</p>
+            <h3>Bronze</h3><p class="preco">R$ 50/mês</p><p>Conexões para começar a crescer.</p>
+            <a href="#beneficios-bronze" data-modal="beneficios-bronze" aria-haspopup="dialog">Ver benefícios Bronze <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="cartao-plano plano-silver" style="--ordem: 2">
+            <p class="sobretitulo">ASSOCIAÇÃO</p>
+            <h3>Prata</h3><p class="preco">R$ 100/mês</p><p>Mais visibilidade para seu negócio.</p>
+            <a href="#beneficios-silver" data-modal="beneficios-silver" aria-haspopup="dialog">Ver benefícios Prata <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="cartao-plano plano-gold" style="--ordem: 3">
+            <p class="sobretitulo">ASSOCIAÇÃO</p>
+            <h3>Ouro</h3><p class="preco">R$ 200/mês</p><p>Uma parceria para ir mais longe.</p>
+            <a href="#beneficios-gold" data-modal="beneficios-gold" aria-haspopup="dialog">Ver benefícios Ouro <span aria-hidden="true">↗</span></a>
+          </article>
+        </section>
+      </div>
+      <dialog id="beneficios-np" aria-labelledby="titulo-np">
+        <h2 id="titulo-np">Associação NP</h2>
+        <p class="preco">Gratuito</p><p>Para organizações sem fins lucrativos.</p>
+        <ul><li>Presença no diretório de membros</li><li>Participação em encontros de networking</li><li>Acesso ao boletim de oportunidades</li></ul>
+        <form method="dialog"><button class="botao-principal" type="submit">Fechar benefícios NP</button></form>
+      </dialog>
+      <dialog id="beneficios-bronze" aria-labelledby="titulo-bronze">
+        <h2 id="titulo-bronze">Associação Bronze</h2>
+        <p class="preco">R$ 50/mês</p><p>Conexões para começar a crescer.</p>
+        <ul><li>Todos os benefícios NP</li><li>Uma capacitação por trimestre</li><li>10% de desconto em eventos</li></ul>
+        <form method="dialog"><button class="botao-principal" type="submit">Fechar benefícios Bronze</button></form>
+      </dialog>
+      <dialog id="beneficios-silver" aria-labelledby="titulo-silver">
+        <h2 id="titulo-silver">Associação Prata</h2>
+        <p class="preco">R$ 100/mês</p><p>Mais visibilidade para seu negócio.</p>
+        <ul><li>Todos os benefícios Bronze</li><li>Uma capacitação por mês</li><li>Destaque rotativo na página inicial</li><li>20% de desconto em eventos</li></ul>
+        <form method="dialog"><button class="botao-principal" type="submit">Fechar benefícios Prata</button></form>
+      </dialog>
+      <dialog id="beneficios-gold" aria-labelledby="titulo-gold">
+        <h2 id="titulo-gold">Associação Ouro</h2>
+        <p class="preco">R$ 200/mês</p><p>Uma parceria para ir mais longe.</p>
+        <ul><li>Todos os benefícios Prata</li><li>Prioridade no destaque da página inicial</li><li>Acesso a encontros empresariais exclusivos</li><li>30% de desconto em eventos</li></ul>
+        <form method="dialog"><button class="botao-principal" type="submit">Fechar benefícios Ouro</button></form>
+      </dialog>
+      <noscript><p>Ative o JavaScript para consultar os benefícios e registrar a data e hora do pedido.</p></noscript>
     </main>
     <footer>
       <div class="rodape limite">

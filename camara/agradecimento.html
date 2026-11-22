@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pedido de associação | Câmara de Comércio de São Paulo</title>
+    <meta
+      name="description"
+      content="Solicite sua associação à Câmara de Comércio de São Paulo e conheça os planos e benefícios para sua organização.">
+    <meta name="author" content="Gabriel Venditti Barreira">
+    <meta
+      property="og:title"
+      content="Pedido de associação | Câmara de Comércio de São Paulo">
+    <meta
+      property="og:description"
+      content="Conectando ideias, pessoas e negócios. Explore os membros deste projeto acadêmico de Câmara de Comércio.">
+    <meta
+      property="og:image"
+      content="https://gabrielvendittibarreira.github.io/wdd231/camara/imagens/compartilhamento.png">
+    <meta
+      property="og:image:alt"
+      content="Ilustração de edifícios em azul e dourado, identidade visual da Câmara">
+    <meta
+      property="og:url"
+      content="https://gabrielvendittibarreira.github.io/wdd231/camara/agradecimento.html">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <link rel="icon" href="imagens/logo.svg" type="image/svg+xml">
+    <link
+      rel="canonical"
+      href="https://gabrielvendittibarreira.github.io/wdd231/camara/agradecimento.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet" href="estilos/normalize.css">
+    <link rel="stylesheet" href="estilos/telas-pequenas.css">
+    <link rel="stylesheet" href="estilos/telas-grandes.css">
+    <link rel="stylesheet" href="estilos/associacao.css">
+    <script src="scripts/site.js" defer></script>
+    <script src="scripts/agradecimento.js" defer></script>
+  </head>
+  <body>
+    <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+    <header>
+      <div class="cabecalho limite">
+        <a class="marca" href="index.html"
+          ><img src="imagens/logo.svg" alt="" width="56" height="56"><span
+            >Câmara de Comércio<strong>São Paulo</strong></span
+          ></a
+        >
+        <button
+          class="menu"
+          id="botao-menu"
+          type="button"
+          aria-label="Abrir menu"
+          aria-controls="navegacao"
+          aria-expanded="false"
+        >
+          ☰
+        </button>
+        <nav id="navegacao" aria-label="Navegação principal">
+          <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="diretorio.html">Diretório</a></li>
+            <li>
+              <a
+                class="link-associacao"
+                href="associacao.html"
+                aria-current="location"
+                >Associe-se <span aria-hidden="true">↗</span></a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main id="conteudo" class="limite">
+      <div class="introducao">
+        <p class="sobretitulo">PEDIDO DE ASSOCIAÇÃO</p>
+        <h1>Obrigado por dar este passo!</h1>
+        <p class="descricao">Confira abaixo os dados informados no formulário. Esta é uma confirmação demonstrativa do projeto acadêmico.</p>
+      </div>
+      <section class="painel-formulario confirmacao" aria-labelledby="titulo-resumo">
+        <h2 id="titulo-resumo">Resumo do pedido</h2>
+        <p id="aviso-confirmacao" hidden>Não há um pedido completo para exibir. Preencha o formulário de associação.</p>
+        <dl id="resumo-pedido">
+          <dt>Nome</dt><dd data-campo="nome"></dd>
+          <dt>Sobrenome</dt><dd data-campo="sobrenome"></dd>
+          <dt>E-mail</dt><dd data-campo="email"></dd>
+          <dt>Celular</dt><dd data-campo="celular"></dd>
+          <dt>Empresa ou organização</dt><dd data-campo="organizacao"></dd>
+          <dt>Data e hora do pedido</dt><dd data-campo="datahora"></dd>
+        </dl>
+        <noscript><p>Ative o JavaScript para visualizar os dados enviados.</p></noscript>
+        <a class="botao-principal" href="associacao.html">Voltar à associação</a>
+      </section>
+    </main>
+    <footer>
+      <div class="rodape limite">
+        <div>
+          <p class="nome-camara">Câmara de Comércio de São Paulo</p>
+          <p>Conectando ideias, pessoas e negócios.</p>
+          <p>São Paulo · SP · Brasil</p>
+        </div>
+        <div>
+          <p class="titulo-rodape">Contato do projeto</p>
+          <a href="mailto:gabrielvendittib@gmail.com"
+            >gabrielvendittib@gmail.com</a
+          >
+          <p>Telefone ilustrativo: (11) 0000-0100</p>
+          <p>Projeto acadêmico com dados fictícios.</p>
+        </div>
+        <div class="redes" role="group" aria-label="Redes e contato">
+          <a
+            href="https://github.com/GabrielVendittiBarreira/wdd231"
+            aria-label="Repositório no GitHub"
+            ><img
+              src="imagens/github.svg"
+              alt=""
+              width="24"
+              height="24"></a
+          ><a
+            href="https://www.linkedin.com/in/gabrielvendittibarreira/"
+            aria-label="Perfil no LinkedIn"
+            ><img
+              src="imagens/linkedin.svg"
+              alt=""
+              width="24"
+              height="24"></a
+          ><a
+            href="mailto:gabrielvendittib@gmail.com"
+            aria-label="E-mail do desenvolvedor"
+            ><img src="imagens/email.svg" alt="" width="24" height="24"></a>
+        </div>
+      </div>
+      <div class="creditos limite">
+        <p>
+          © <span id="anoAtual"></span> · Gabriel Venditti Barreira · WDD 231
+        </p>
+        <p id="ultimaModificacao"></p>
+      </div>
+    </footer>
+  </body>
+</html>
