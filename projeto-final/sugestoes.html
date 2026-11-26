@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sugira uma Cafeteria | Rota Café SP</title>
+    <meta name="description" content="Envie uma sugestão de cafeteria independente para integrar o guia Rota Café SP.">
+    <meta name="author" content="Gabriel Venditti Barreira">
+    <meta property="og:title" content="Sugira uma Cafeteria | Rota Café SP">
+    <meta property="og:description" content="Compartilhe uma cafeteria que merece ser descoberta.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://gabrielvendittibarreira.github.io/wdd231/projeto-final/imagens/alpha.webp">
+    <link rel="icon" href="imagens/alpha.webp" type="image/webp">
+    <link rel="stylesheet" href="estilos.css">
+    <script src="scripts/site.js" type="module"></script>
+  </head>
+  <body>
+    <header>
+      <div class="cabecalho limite">
+        <a class="marca" href="index.html"><span class="marca-simbolo" aria-hidden="true">RC</span><span><strong>Rota Café</strong> SP</span></a>
+        <button id="botao-menu" class="menu" type="button" aria-expanded="false" aria-controls="navegacao" aria-label="Abrir menu">☰</button>
+        <nav id="navegacao" aria-label="Navegação principal">
+          <ul><li><a href="index.html">Início</a></li><li><a href="cafeterias.html">Cafeterias</a></li><li><a href="sugestoes.html" aria-current="page">Sugira uma cafeteria</a></li></ul>
+        </nav>
+      </div>
+    </header>
+    <main id="conteudo" class="limite formulario-pagina">
+      <div class="titulo-secao">
+        <p class="sobretitulo">COLABORE COM O GUIA</p>
+        <h1>Sugira uma cafeteria</h1>
+        <p>Conhece um lugar especial? Envie os dados para nossa próxima seleção.</p>
+      </div>
+      <form action="obrigado.html" method="get">
+        <label for="nome">Seu nome</label>
+        <input id="nome" name="nome" type="text" autocomplete="name" required>
+        <label for="email">Seu e-mail</label>
+        <input id="email" name="email" type="email" autocomplete="email" required>
+        <label for="cafeteria">Nome da cafeteria</label>
+        <input id="cafeteria" name="cafeteria" type="text" required>
+        <label for="bairro">Bairro</label>
+        <input id="bairro" name="bairro" type="text" required>
+        <label for="motivo">Por que você recomenda este lugar?</label>
+        <textarea id="motivo" name="motivo" rows="5" required></textarea>
+        <button class="botao" type="submit">Enviar sugestão</button>
+      </form>
+    </main>
+    <footer>
+      <div class="limite rodape">
+        <p>© 2026 Rota Café SP · Gabriel Venditti Barreira</p>
+        <div><a href="atribuicoes.html">Atribuições</a><a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">Vídeo da demonstração</a></div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cafeterias de São Paulo | Rota Café SP</title>
+    <meta name="description" content="Consulte e filtre cafeterias independentes, bairros e métodos de preparo em São Paulo.">
+    <meta name="author" content="Gabriel Venditti Barreira">
+    <meta property="og:title" content="Cafeterias | Rota Café SP">
+    <meta property="og:description" content="Descubra cafeterias independentes por bairro em São Paulo.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://gabrielvendittibarreira.github.io/wdd231/projeto-final/imagens/alpha.webp">
+    <link rel="icon" href="imagens/alpha.webp" type="image/webp">
+    <link rel="stylesheet" href="estilos.css">
+    <script src="scripts/cafeterias.js" type="module"></script>
+  </head>
+  <body>
+    <header>
+      <div class="cabecalho limite">
+        <a class="marca" href="index.html"><span class="marca-simbolo" aria-hidden="true">RC</span><span><strong>Rota Café</strong> SP</span></a>
+        <button id="botao-menu" class="menu" type="button" aria-expanded="false" aria-controls="navegacao" aria-label="Abrir menu">☰</button>
+        <nav id="navegacao" aria-label="Navegação principal">
+          <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="cafeterias.html" aria-current="page">Cafeterias</a></li>
+            <li><a href="sugestoes.html">Sugira uma cafeteria</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main id="conteudo" class="limite pagina-catalogo">
+      <div class="titulo-secao">
+        <p class="sobretitulo">CATÁLOGO LOCAL</p>
+        <h1>Cafeterias de São Paulo</h1>
+      </div>
+      <div class="controles">
+        <label for="filtro-bairro">Filtrar por bairro</label>
+        <select id="filtro-bairro">
+          <option value="todos">Todos os bairros</option>
+        </select>
+        <button id="botao-favoritos" type="button" aria-pressed="false">Somente favoritos</button>
+      </div>
+      <p id="quantidade" role="status"></p>
+      <div id="lista-cafeterias" class="lista-cafeterias" aria-live="polite"></div>
+      <div id="erro-dados" class="erro" hidden>Não foi possível carregar as cafeterias.</div>
+    </main>
+    <dialog id="modal-cafeteria" aria-labelledby="modal-titulo">
+      <div class="modal-cabecalho">
+        <h2 id="modal-titulo"></h2>
+        <button id="fechar-modal" type="button" aria-label="Fechar detalhes">×</button>
+      </div>
+      <div id="modal-conteudo"></div>
+    </dialog>
+    <footer>
+      <div class="limite rodape">
+        <p>© 2026 Rota Café SP · Gabriel Venditti Barreira</p>
+        <div><a href="atribuicoes.html">Atribuições</a><a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">Vídeo da demonstração</a></div>
+      </div>
+    </footer>
+  </body>
+</html>

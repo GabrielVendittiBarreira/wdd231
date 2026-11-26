@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sugestão Recebida | Rota Café SP</title>
+    <meta name="description" content="Confirmação de recebimento da sugestão de cafeteria.">
+    <meta name="author" content="Gabriel Venditti Barreira">
+    <link rel="icon" href="imagens/alpha.webp" type="image/webp">
+    <link rel="stylesheet" href="estilos.css">
+  </head>
+  <body>
+    <header><div class="cabecalho limite"><a class="marca" href="index.html"><span class="marca-simbolo" aria-hidden="true">RC</span><span><strong>Rota Café</strong> SP</span></a></div></header>
+    <main id="conteudo" class="limite confirmacao">
+      <p class="sobretitulo">SUGESTÃO RECEBIDA</p>
+      <h1>Obrigado pela indicação!</h1>
+      <div id="dados-enviados"></div>
+      <a class="botao" href="cafeterias.html">Voltar ao catálogo</a>
+    </main>
+    <footer><div class="limite rodape"><p>© 2026 Rota Café SP</p><div><a href="atribuicoes.html">Atribuições</a><a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">Vídeo da demonstração</a></div></div></footer>
+    <script>
+      const parametros = new URLSearchParams(location.search);
+      const caixa = document.querySelector("#dados-enviados");
+      const nome = parametros.get("nome");
+      if (nome) {
+        const cafeteria = parametros.get("cafeteria");
+        const bairro = parametros.get("bairro");
+        caixa.innerHTML = `<p><strong>${nome}</strong>, sua sugestão de <strong>${cafeteria}</strong> no bairro <strong>${bairro}</strong> foi registrada nesta demonstração.</p>`;
+      } else {
+        caixa.innerHTML = "<p>Nenhuma informação foi enviada pelo formulário.</p>";
+      }
+    </script>
+  </body>
+</html>
