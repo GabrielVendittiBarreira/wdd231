@@ -38,6 +38,7 @@
     <link rel="stylesheet" href="estilos/telas-pequenas.css">
     <link rel="stylesheet" href="estilos/telas-grandes.css">
     <script src="scripts/site.js" defer></script>
+    <script src="scripts/inicio.js" defer></script>
   </head>
   <body>
     <a class="pular" href="#conteudo">Pular para o conteúdo</a>
@@ -73,17 +74,64 @@
       </div>
     </header>
     <main id="conteudo" class="limite">
-      <div class="introducao">
-        <p class="sobretitulo">PROJETO WDD 231</p>
-        <h1>Página inicial da Câmara</h1>
-        <p class="descricao">
-          Esta página será desenvolvida na semana 03. O diretório de membros já
-          está disponível.
-        </p>
-        <a class="botao-principal" href="diretorio.html"
-          >Explorar o diretório <span aria-hidden="true">→</span></a
+      <section class="heroi" aria-labelledby="titulo-pagina">
+        <img
+          src="imagens/compartilhamento.png"
+          alt="Ilustração de empresas conectadas à Câmara de Comércio de São Paulo"
+          width="1200"
+          height="630"
         >
+        <div class="conteudo-heroi">
+          <p class="sobretitulo">CONECTANDO SÃO PAULO</p>
+          <h1 id="titulo-pagina">Fortaleça seu negócio.<br>Amplie sua rede.</h1>
+          <a class="chamada-acao" href="associacao.html">
+            Associe-se à Câmara <span aria-hidden="true">→</span>
+          </a>
+        </div>
+      </section>
+
+      <div class="painel-inicio">
+        <section class="eventos" aria-labelledby="titulo-eventos">
+          <p class="sobretitulo">AGENDA DA CÂMARA</p>
+          <h2 id="titulo-eventos">Eventos recentes</h2>
+          <article class="evento">
+            <p class="data-evento"><span>18</span> NOV</p>
+            <div>
+              <h3>Encontro de negócios locais</h3>
+              <p>Conecte sua empresa a novos parceiros e oportunidades.</p>
+            </div>
+          </article>
+          <article class="evento">
+            <p class="data-evento"><span>22</span> NOV</p>
+            <div>
+              <h3>Workshop de crescimento digital</h3>
+              <p>Estratégias práticas para fortalecer sua presença online.</p>
+            </div>
+          </article>
+        </section>
+
+        <section class="tempo" aria-labelledby="titulo-tempo">
+          <p class="sobretitulo">SÃO PAULO · SP</p>
+          <h2 id="titulo-tempo">Tempo</h2>
+          <div id="dados-tempo" aria-live="polite">
+            <p>Carregando informações meteorológicas…</p>
+          </div>
+        </section>
       </div>
+
+      <section class="destaques" aria-labelledby="titulo-destaques">
+        <div class="cabecalho-destaques">
+          <div>
+            <p class="sobretitulo">MEMBROS DA REDE</p>
+            <h2 id="titulo-destaques">Empresas em destaque</h2>
+          </div>
+          <a href="diretorio.html">Ver todo o diretório <span aria-hidden="true">→</span></a>
+        </div>
+        <div id="destaques-membros" class="membros grade" aria-busy="true"></div>
+        <p id="erro-destaques" class="erro" hidden>
+          Não foi possível carregar os destaques agora.
+        </p>
+      </section>
     </main>
     <footer>
       <div class="rodape limite">

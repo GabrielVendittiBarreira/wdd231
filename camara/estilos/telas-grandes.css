@@ -52,6 +52,24 @@
   .descricao {
     font-size: 1.1rem;
   }
+  .heroi {
+    min-height: 480px;
+  }
+  .heroi > img {
+    height: 480px;
+  }
+  .conteudo-heroi {
+    padding: 4rem 2.5rem 2.5rem;
+  }
+  .conteudo-heroi h1 {
+    font-size: 3.25rem;
+  }
+  .painel-inicio {
+    grid-template-columns: 1.35fr 0.65fr;
+  }
+  .destaques {
+    padding: 2rem;
+  }
   .grade {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }

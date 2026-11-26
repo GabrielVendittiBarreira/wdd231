@@ -349,6 +349,152 @@ h1 {
 .botao-principal {
   margin-top: 1.5rem;
 }
+.heroi {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  background: var(--marinho);
+  min-height: 360px;
+}
+.heroi > img {
+  display: block;
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+}
+.conteudo-heroi {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 2.5rem 1.25rem 1.25rem;
+  color: white;
+  background: linear-gradient(transparent, rgba(23, 63, 85, 0.94));
+}
+.conteudo-heroi h1 {
+  color: white;
+  font-size: 1.85rem;
+  margin-bottom: 1rem;
+}
+.conteudo-heroi .sobretitulo {
+  color: #dbe7e3;
+}
+.chamada-acao {
+  display: inline-block;
+  min-height: 44px;
+  padding: 0.7rem 1rem;
+  border-radius: 6px;
+  background: var(--dourado);
+  color: #173f55;
+  text-decoration: none;
+  font-weight: 800;
+}
+.painel-inicio {
+  display: grid;
+  gap: 1.25rem;
+  margin-block: 2rem;
+}
+.eventos,
+.tempo,
+.destaques {
+  background: white;
+  border: 1px solid var(--linha);
+  border-radius: 10px;
+  padding: 1.25rem;
+}
+.eventos h2,
+.tempo h2,
+.destaques h2 {
+  color: var(--marinho);
+  margin-bottom: 1rem;
+}
+.evento {
+  display: grid;
+  grid-template-columns: 58px 1fr;
+  gap: 0.75rem;
+  border-top: 1px solid var(--linha);
+  padding-top: 1rem;
+  margin-top: 1rem;
+}
+.evento h3 {
+  font-size: 1rem;
+  margin-bottom: 0.35rem;
+}
+.evento p {
+  font-size: 0.82rem;
+  color: var(--muted);
+  margin-bottom: 0;
+}
+.evento .data-evento {
+  text-align: center;
+  color: var(--marinho);
+  font-size: 0.65rem;
+  font-weight: 800;
+  border-right: 1px solid var(--linha);
+  height: 62px;
+}
+.data-evento span {
+  display: block;
+  font-family: "Manrope", sans-serif;
+  font-size: 1.55rem;
+  line-height: 1.15;
+}
+.tempo-atual {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.temperatura {
+  color: var(--marinho);
+  font-family: "Manrope", sans-serif;
+  font-size: 2.8rem;
+  font-weight: 800;
+  line-height: 1;
+}
+.descricao-tempo {
+  color: var(--muted);
+  text-transform: capitalize;
+  margin: 0;
+}
+.previsao {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  border-top: 1px solid var(--linha);
+  padding-top: 1rem;
+}
+.dia-previsao {
+  text-align: center;
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+.dia-previsao strong {
+  display: block;
+  color: var(--marinho);
+  font-size: 0.9rem;
+  margin-top: 0.25rem;
+}
+.destaques {
+  margin-bottom: 3rem;
+}
+.cabecalho-destaques {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+.cabecalho-destaques h2 {
+  margin-bottom: 0;
+}
+.cabecalho-destaques a {
+  color: var(--marinho);
+  font-size: 0.8rem;
+  font-weight: 700;
+  min-height: 44px;
+  white-space: nowrap;
+}
 footer {
   background: var(--marinho);
   color: white;
