@@ -3,20 +3,206 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Projeto Final | Gabriel Venditti Barreira</title>
+    <title>Planejamento do Site | Rota Café SP</title>
     <meta
       name="description"
-      content="Espaço reservado para o Projeto Final de WDD 231.">
+      content="Documento de planejamento do site Rota Café SP, incluindo objetivo, público, cores, tipografia e wireframes responsivos."
+    >
+    <meta name="author" content="Gabriel Venditti Barreira">
+    <link
+      rel="canonical"
+      href="https://gabrielvendittibarreira.github.io/wdd231/projeto-final/"
+    >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    >
     <link rel="stylesheet" href="../estilos/normalize.css">
-    <link rel="stylesheet" href="../estilos/telas-pequenas.css">
+    <link rel="stylesheet" href="../projeto-final/planejamento.css">
   </head>
   <body>
-    <main>
-      <h1>Projeto Final</h1>
-      <p>
-        Este projeto será desenvolvido a partir da semana 06 do curso WDD 231.
-      </p>
-      <a href="../">Voltar à Página Inicial</a>
+    <header class="cabecalho">
+      <div class="limite">
+        <a class="marca" href="../index.html">WDD 231 · Projeto Individual</a>
+        <nav aria-label="Navegação do documento">
+          <a href="#nome">Nome</a>
+          <a href="#finalidade">Finalidade</a>
+          <a href="#cenarios">Cenários</a>
+          <a href="#cores">Cores</a>
+          <a href="#tipografia">Tipografia</a>
+          <a href="#wireframes">Wireframes</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="limite">
+      <section class="intro" aria-labelledby="titulo">
+        <p class="sobretitulo">PLANO DO SITE · SEMANA 05</p>
+        <h1 id="titulo">Rota Café SP</h1>
+        <p>
+          Planejamento básico para um guia responsivo de cafeterias independentes
+          em São Paulo.
+        </p>
+      </section>
+
+      <section id="nome" aria-labelledby="titulo-nome">
+        <h2 id="titulo-nome">Nome do site</h2>
+        <p>
+          <strong>Rota Café SP</strong> foi escolhido porque combina o conceito
+          de um roteiro turístico e gastronômico com a localização da cidade.
+          A expressão é curta, direta e ajuda o visitante a entender imediatamente
+          que o site apresenta experiências com café em São Paulo.
+        </p>
+        <p><strong>Domínio representativo opcional:</strong> rotacafesp.com.br</p>
+      </section>
+
+      <section id="finalidade" aria-labelledby="titulo-finalidade">
+        <h2 id="titulo-finalidade">Finalidade do site</h2>
+        <p>
+          O Rota Café SP será um catálogo de cafeterias independentes da cidade.
+          A página inicial apresentará bairros em destaque, filtros por estilo e
+          uma seleção especial. O site oferecerá perfis com endereço, horário,
+          características, métodos de preparo e link de localização, além de um
+          formulário para enviar novas sugestões de estabelecimentos.
+        </p>
+      </section>
+
+      <section id="cenarios" aria-labelledby="titulo-cenarios">
+        <h2 id="titulo-cenarios">Cenários</h2>
+        <ol class="cenarios">
+          <li>
+            <strong>Maria, 27 anos, trabalha perto da Avenida Paulista.</strong>
+            Ela deseja encontrar uma cafeteria próxima com ambiente adequado para
+            estudar por uma tarde. Ela pode usar os filtros por bairro e ambiente.
+          </li>
+          <li>
+            <strong>Rafael, 34 anos, visita São Paulo pela primeira vez.</strong>
+            Ele procura uma cafeteria especial para experimentar cafés filtrados.
+            Ele pode consultar os perfis e abrir a localização no mapa.
+          </li>
+          <li>
+            <strong>Ana, 31 anos, administra uma cafeteria pequena.</strong>
+            Ela quer enviar os dados de seu estabelecimento para sugerir sua
+            inclusão no catálogo. Ela pode usar o formulário de cadastro.
+          </li>
+        </ol>
+      </section>
+
+      <section id="cores" aria-labelledby="titulo-cores">
+        <h2 id="titulo-cores">Esquema de cores</h2>
+        <div class="paleta" aria-label="Paleta de cores planejada">
+          <article>
+            <span class="amostra cafe" aria-hidden="true"></span>
+            <h3>Café profundo</h3>
+            <p>#30221C — títulos, navegação e rodapé.</p>
+          </article>
+          <article>
+            <span class="amostra creme" aria-hidden="true"></span>
+            <h3>Creme</h3>
+            <p>#F7F0E5 — fundo principal e áreas claras.</p>
+          </article>
+          <article>
+            <span class="amostra verde" aria-hidden="true"></span>
+            <h3>Verde folha</h3>
+            <p>#3F6B55 — links, botões e elementos de ação.</p>
+          </article>
+          <article>
+            <span class="amostra dourado" aria-hidden="true"></span>
+            <h3>Caramelo</h3>
+            <p>#C9934A — detalhes decorativos e ênfases.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="tipografia" aria-labelledby="titulo-tipografia">
+        <h2 id="titulo-tipografia">Tipografia</h2>
+        <div class="tipografia">
+          <article>
+            <p class="fonte-amostra manrope">Aa</p>
+            <h3>Manrope</h3>
+            <p>Aplicada aos títulos e à navegação por oferecer boa leitura em tamanhos grandes.</p>
+          </article>
+          <article>
+            <p class="fonte-amostra dm-sans">Aa</p>
+            <h3>DM Sans</h3>
+            <p>Aplicada ao corpo de texto, formulários e descrições por ser clara e versátil.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="wireframes" aria-labelledby="titulo-wireframes">
+        <h2 id="titulo-wireframes">Wireframes da página inicial</h2>
+        <p>
+          Os wireframes abaixo são esboços estruturais em preto e branco para
+          identificar a hierarquia antes do refinamento visual.
+        </p>
+
+        <h3>Viewport pequena</h3>
+        <div class="wireframe wireframe-pequeno" aria-label="Wireframe da página inicial em tela pequena">
+          <div class="wf-cabecalho"><span>LOGO</span><span>MENU</span></div>
+          <div class="wf-hero">
+            <span>TÍTULO</span>
+            <span>DESCRIÇÃO</span>
+            <span>BOTÃO</span>
+          </div>
+          <div class="wf-titulo">SEÇÃO DESTAQUES</div>
+          <div class="wf-cartoes">
+            <div>CARD 1</div>
+            <div>CARD 2</div>
+            <div>CARD 3</div>
+          </div>
+          <div class="wf-titulo">EXPLORAR POR BAIRRO</div>
+          <div class="wf-bloco">LISTA DE BAIRROS</div>
+          <div class="wf-rodape">RODAPÉ</div>
+        </div>
+
+        <h3>Viewport grande</h3>
+        <div class="wireframe wireframe-grande" aria-label="Wireframe da página inicial em tela grande">
+          <div class="wf-cabecalho">
+            <span>LOGO</span>
+            <span>NAVEGAÇÃO</span>
+            <span>CTA</span>
+          </div>
+          <div class="wf-hero">
+            <span>TÍTULO E DESCRIÇÃO</span>
+            <span>IMAGEM</span>
+          </div>
+          <div class="wf-titulo">DESTAQUES DA SEMANA</div>
+          <div class="wf-cartoes">
+            <div>CARD 1</div>
+            <div>CARD 2</div>
+            <div>CARD 3</div>
+          </div>
+          <div class="wf-duas-colunas">
+            <div class="wf-bloco">MAPA / FILTROS</div>
+            <div class="wf-bloco">LISTA DE CAFETERIAS</div>
+          </div>
+          <div class="wf-rodape">RODAPÉ</div>
+        </div>
+      </section>
+
+      <section aria-labelledby="titulo-estrategia">
+        <h2 id="titulo-estrategia">Estratégia de conteúdo e funcionalidades</h2>
+        <p>
+          Os dados principais serão fornecidos por um arquivo JSON local com nomes,
+          bairros, tipos de café, horários e características das cafeterias. O
+          JavaScript exibirá os dados em cartões, aplicará filtros e gerará uma
+          seleção aleatória da seção de destaques.
+        </p>
+        <p>
+          A página incluirá pelo menos três documentos HTML, navegação responsiva,
+          formulário acessível para sugestões, armazenamento local das opções
+          favoritas e uma integração com API externa quando disponível.
+        </p>
+      </section>
     </main>
+
+    <footer>
+      <div class="limite">
+        <p>© 2026 · Gabriel Venditti Barreira · WDD 231</p>
+      </div>
+    </footer>
   </body>
 </html>

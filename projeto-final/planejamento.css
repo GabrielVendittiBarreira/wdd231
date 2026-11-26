@@ -1,0 +1,311 @@
+:root {
+  --cafe: #30221c;
+  --creme: #f7f0e5;
+  --verde: #3f6b55;
+  --dourado: #c9934a;
+  --texto: #30221c;
+  --linha: #c9bfb1;
+  font-family: "DM Sans", "Trebuchet MS", sans-serif;
+  color: var(--texto);
+  background: var(--creme);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  line-height: 1.65;
+}
+
+.limite {
+  width: min(1120px, calc(100% - 2.5rem));
+  margin-inline: auto;
+}
+
+.cabecalho {
+  background: white;
+  border-bottom: 1px solid var(--linha);
+  padding-block: 1rem;
+}
+
+.cabecalho .limite {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.marca {
+  color: var(--cafe);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.cabecalho nav {
+  display: flex;
+  gap: 0.35rem 1rem;
+  flex-wrap: wrap;
+}
+
+.cabecalho nav a {
+  color: var(--verde);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+main.limite {
+  padding-block: 3rem 4rem;
+}
+
+section {
+  background: white;
+  border: 1px solid var(--linha);
+  border-radius: 10px;
+  padding: clamp(1.25rem, 4vw, 2.25rem);
+  margin-bottom: 1.5rem;
+}
+
+.intro {
+  background: var(--cafe);
+  color: white;
+  border: 0;
+}
+
+.sobretitulo {
+  margin: 0 0 0.5rem;
+  color: var(--dourado);
+  font-size: 0.75rem;
+  letter-spacing: 0.16em;
+  font-weight: 800;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Manrope", "Trebuchet MS", sans-serif;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 8vw, 4.5rem);
+  margin: 0 0 0.5rem;
+}
+
+h2 {
+  color: var(--cafe);
+  margin: 0 0 1rem;
+  border-bottom: 2px solid var(--dourado);
+  padding-bottom: 0.5rem;
+}
+
+h3 {
+  margin-block: 1rem 0.5rem;
+}
+
+p {
+  margin-block: 0 1rem;
+}
+
+.cenarios {
+  padding-left: 1.25rem;
+}
+
+.cenarios li {
+  margin-bottom: 1rem;
+  padding-left: 0.25rem;
+}
+
+.paleta,
+.tipografia {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.paleta article,
+.tipografia article {
+  border: 1px solid var(--linha);
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.paleta h3,
+.tipografia h3 {
+  margin-top: 0.75rem;
+}
+
+.paleta p,
+.tipografia p {
+  font-size: 0.85rem;
+  margin-bottom: 0;
+}
+
+.amostra {
+  display: block;
+  height: 78px;
+  border: 1px solid #84776b;
+  border-radius: 6px;
+}
+
+.cafe {
+  background: var(--cafe);
+}
+
+.creme {
+  background: var(--creme);
+}
+
+.verde {
+  background: var(--verde);
+}
+
+.dourado {
+  background: var(--dourado);
+}
+
+.fonte-amostra {
+  font-size: 3rem;
+  line-height: 1;
+  margin: 0;
+  color: var(--cafe);
+}
+
+.manrope {
+  font-family: "Manrope", "Trebuchet MS", sans-serif;
+  font-weight: 800;
+}
+
+.dm-sans {
+  font-family: "DM Sans", "Trebuchet MS", sans-serif;
+}
+
+.wireframe {
+  color: #111;
+  background: white;
+  border: 2px solid #111;
+  margin: 0 auto 2.5rem;
+  padding: 0.75rem;
+  font-family: monospace;
+  font-size: 0.72rem;
+  text-align: center;
+}
+
+.wireframe-pequeno {
+  max-width: 320px;
+}
+
+.wireframe-grande {
+  max-width: 900px;
+}
+
+.wf-cabecalho,
+.wf-hero,
+.wf-cartoes,
+.wf-duas-colunas {
+  display: grid;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.wf-cabecalho {
+  grid-template-columns: 1fr 1fr;
+  min-height: 44px;
+  border: 2px solid #111;
+  align-items: center;
+  padding: 0.35rem;
+}
+
+.wireframe-grande .wf-cabecalho {
+  grid-template-columns: 1fr 2fr 1fr;
+}
+
+.wf-hero {
+  grid-template-columns: 1fr;
+  min-height: 160px;
+  border: 2px solid #111;
+  align-content: center;
+  padding: 0.75rem;
+}
+
+.wireframe-grande .wf-hero {
+  grid-template-columns: 1fr 1fr;
+  min-height: 220px;
+}
+
+.wf-hero span {
+  border: 1px solid #777;
+  padding: 0.4rem;
+}
+
+.wf-titulo {
+  width: 55%;
+  margin: 1.25rem auto 0.75rem;
+  border: 2px solid #111;
+  padding: 0.35rem;
+}
+
+.wf-cartoes {
+  grid-template-columns: 1fr;
+}
+
+.wireframe-grande .wf-cartoes {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.wf-cartoes div,
+.wf-bloco,
+.wf-rodape {
+  border: 2px solid #111;
+  min-height: 100px;
+  display: grid;
+  place-items: center;
+  padding: 0.5rem;
+}
+
+.wireframe-grande .wf-duas-colunas {
+  grid-template-columns: 1fr 1fr;
+}
+
+.wf-duas-colunas .wf-bloco {
+  min-height: 180px;
+}
+
+.wf-rodape {
+  min-height: 70px;
+  margin-top: 0.75rem;
+}
+
+footer {
+  background: var(--cafe);
+  color: white;
+  padding-block: 1.5rem;
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.85rem;
+}
+
+a:focus-visible {
+  outline: 3px solid var(--dourado);
+  outline-offset: 4px;
+}
+
+@media (min-width: 760px) {
+  .paleta {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .tipografia {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .wireframe-pequeno {
+    max-width: 360px;
+  }
+}
