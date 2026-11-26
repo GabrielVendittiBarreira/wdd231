@@ -5,6 +5,54 @@ const erroDestaques = document.querySelector("#erro-destaques");
 async function carregarTempo() {
   const latitude = -23.5505;
   const longitude = -46.6333;
+  const chaveOpenWeather = "";
+
+  if (!chaveOpenWeather) {
+    await carregarTempoComFallback(latitude, longitude);
+    return;
+  }
+
+  const url =
+    `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}` +
+    `&lon=${longitude}&appid=${encodeURIComponent(chaveOpenWeather)}` +
+    `&units=metric&lang=pt_br&cnt=24`;
+
+  try {
+    const resposta = await fetch(url);
+    if (!resposta.ok) {
+      throw new Error("Não foi possível consultar o clima.");
+    }
+
+    const dados = await resposta.json();
+    const atual = dados.list[0];
+    const descricao = atual.weather[0].description;
+    const dias = dados.list.filter((item) => item.dt_txt.includes("12:00:00")).slice(0, 3);
+    const previsao = dias.map((item) => {
+      const dia = new Intl.DateTimeFormat("pt-BR", { weekday: "short" })
+        .format(new Date(item.dt * 1000));
+      return `
+        <div class="dia-previsao">
+          ${dia}
+          <strong>${Math.round(item.main.temp)}°C</strong>
+        </div>
+      `;
+    }).join("");
+
+    dadosTempo.innerHTML = `
+      <div class="tempo-atual">
+        <span class="temperatura">${Math.round(atual.main.temp)}°C</span>
+        <p class="descricao-tempo">${descricao}</p>
+      </div>
+      <div class="previsao" aria-label="Previsão para os próximos três dias">
+        ${previsao}
+      </div>
+    `;
+  } catch (erro) {
+    await carregarTempoComFallback(latitude, longitude);
+  }
+}
+
+async function carregarTempoComFallback(latitude, longitude) {
   const url =
     `https://api.open-meteo.com/v1/forecast?latitude=${latitude}` +
     `&longitude=${longitude}&current=temperature_2m,weather_code` +
@@ -27,34 +75,23 @@ async function carregarTempo() {
 
   try {
     const resposta = await fetch(url);
-    if (!resposta.ok) {
-      throw new Error("Não foi possível consultar o clima.");
-    }
-
+    if (!resposta.ok) throw new Error("Falha no serviço meteorológico.");
     const dados = await resposta.json();
-    const atual = dados.current;
-    const descricao = codigosTempo.get(atual.weather_code) || "tempo variável";
+    const descricao = codigosTempo.get(dados.current.weather_code) || "tempo variável";
     const dias = dados.daily.time.slice(1, 4).map((data, indice) => {
       const dia = new Intl.DateTimeFormat("pt-BR", { weekday: "short" })
         .format(new Date(`${data}T12:00:00`));
       const maxima = Math.round(dados.daily.temperature_2m_max[indice + 1]);
       const minima = Math.round(dados.daily.temperature_2m_min[indice + 1]);
-      return `
-        <div class="dia-previsao">
-          ${dia}
-          <strong>${maxima}° / ${minima}°</strong>
-        </div>
-      `;
+      return `<div class="dia-previsao">${dia}<strong>${maxima}° / ${minima}°</strong></div>`;
     }).join("");
 
     dadosTempo.innerHTML = `
       <div class="tempo-atual">
-        <span class="temperatura">${Math.round(atual.temperature_2m)}°C</span>
+        <span class="temperatura">${Math.round(dados.current.temperature_2m)}°C</span>
         <p class="descricao-tempo">${descricao}</p>
       </div>
-      <div class="previsao" aria-label="Previsão para os próximos três dias">
-        ${dias}
-      </div>
+      <div class="previsao" aria-label="Previsão para os próximos três dias">${dias}</div>
     `;
   } catch (erro) {
     dadosTempo.innerHTML =
