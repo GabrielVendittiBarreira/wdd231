@@ -38,6 +38,7 @@
     <link rel="stylesheet" href="estilos/telas-pequenas.css">
     <link rel="stylesheet" href="estilos/telas-grandes.css">
     <script src="scripts/site.js" defer></script>
+    <script src="scripts/sobre.js" type="module"></script>
   </head>
   <body>
     <a class="pular" href="#conteudo">Pular para o conteúdo</a>
@@ -72,18 +73,22 @@
         </nav>
       </div>
     </header>
-    <main id="conteudo" class="limite">
-      <div class="introducao">
-        <p class="sobretitulo">PROJETO WDD 231</p>
-        <h1>Sobre São Paulo</h1>
+    <main id="conteudo" class="limite sobre-pagina">
+      <div class="introducao sobre-introducao">
+        <p class="sobretitulo">CONHEÇA A CAPITAL PAULISTA</p>
+        <h1>Descubra São Paulo</h1>
         <p class="descricao">
-          Esta página será desenvolvida na semana 05. O diretório de membros já
-          está disponível.
+          Cultura, história, gastronomia e bairros que fazem da maior cidade do
+          Brasil um destino cheio de oportunidades.
         </p>
-        <a class="botao-principal" href="diretorio.html"
-          >Explorar o diretório <span aria-hidden="true">→</span></a
-        >
       </div>
+
+      <aside id="mensagem-visita" class="mensagem-visita" aria-live="polite"></aside>
+
+      <section class="galeria-sobre" aria-labelledby="titulo-interesses">
+        <h2 id="titulo-interesses">Pontos de interesse</h2>
+        <div id="cartoes-interesse" class="cartoes-interesse" aria-live="polite"></div>
+      </section>
     </main>
     <footer>
       <div class="rodape limite">

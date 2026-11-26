@@ -349,6 +349,93 @@ h1 {
 .botao-principal {
   margin-top: 1.5rem;
 }
+.sobre-introducao {
+  border-bottom: 0;
+  padding-bottom: 1.5rem;
+}
+.mensagem-visita {
+  background: #e8efed;
+  border-left: 5px solid var(--marinho);
+  border-radius: 6px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  color: var(--marinho);
+  font-weight: 700;
+}
+.galeria-sobre h2 {
+  color: var(--marinho);
+  margin-bottom: 1.25rem;
+}
+.cartoes-interesse {
+  display: grid;
+  grid-template-areas:
+    "interesse-1"
+    "interesse-2"
+    "interesse-3"
+    "interesse-4"
+    "interesse-5"
+    "interesse-6"
+    "interesse-7"
+    "interesse-8";
+  gap: 1.25rem;
+}
+.cartao-interesse {
+  background: white;
+  border: 1px solid var(--linha);
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+.cartao-interesse h2 {
+  order: 0;
+  padding: 1.1rem 1.1rem 0;
+  font-size: 1.15rem;
+  margin-bottom: 0.75rem;
+}
+.cartao-interesse figure {
+  order: 1;
+  margin: 0;
+  background: #edf1ef;
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+}
+.cartao-interesse figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: filter 0.25s ease, transform 0.25s ease;
+}
+.cartao-interesse address,
+.cartao-interesse p {
+  padding-inline: 1.1rem;
+}
+.cartao-interesse address {
+  order: 2;
+  margin-top: 1rem;
+  font-size: 0.78rem;
+  font-style: normal;
+  color: var(--muted);
+}
+.cartao-interesse p {
+  order: 3;
+  font-size: 0.86rem;
+  margin-block: 0.65rem 1rem;
+  flex-grow: 1;
+}
+.cartao-interesse button {
+  order: 4;
+  align-self: flex-start;
+  margin: 0 1.1rem 1.1rem;
+  min-height: 44px;
+  border: 1px solid var(--marinho);
+  border-radius: 6px;
+  background: var(--marinho);
+  color: white;
+  font-weight: 700;
+  padding-inline: 1rem;
+}
 .heroi {
   position: relative;
   overflow: hidden;
